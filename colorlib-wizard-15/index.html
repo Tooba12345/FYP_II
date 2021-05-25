@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Sign Up Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" id="signup-form" class="signup-form" action="#">
+                <div>
+                    <h3>Personal info</h3>
+                    <fieldset>
+                        <h2>Personal information</h2>
+                        <p class="desc">Please enter your infomation and proceed to next step so we can proceed</p>
+                        <div class="fieldset-content">
+                            <div class="form-row">
+                                <label class="form-label">Name</label>
+                                <div class="form-flex">
+                                    <div class="form-group">
+                                        <input type="text" name="first_name" id="first_name" />
+                                        <span class="text-input">First</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="last_name" id="last_name" />
+                                        <span class="text-input">Last</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" id="email" />
+                                <span class="text-input">Example  :<span>  Jeff@gmail.com</span></span>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="text" name="phone" id="phone" />
+                            </div>
+                            <div class="form-date">
+                                <label for="birth_date" class="form-label">Birth Date</label>
+                                <div class="form-date-group">
+                                    <div class="form-date-item">
+                                        <select id="birth_month" name="birth_month"></select>
+                                        <span class="text-input">MM</span>
+                                    </div>
+                                    <div class="form-date-item">
+                                        <select id="birth_date" name="birth_date"></select>
+                                        <span class="text-input">DD</span>
+                                    </div>
+                                    <div class="form-date-item">
+                                        <select id="birth_year" name="birth_year"></select>
+                                        <span class="text-input">YYYY</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ssn" class="form-label">SSN</label>
+                                <input type="text" name="ssn" id="ssn" />
+                            </div>
+                        </div> -->
+                    </fieldset>
+
+                    <h3>Upload Scan</h3>
+                  <fieldset>
+                        <h2>Digital Diagnostic Aide </h2>
+                        <p class="desc">Please Upload your FMRI Scan and click to next step so we can Proceed</p>
+                        <div class="fieldset-content">
+                            <div class="form-group">
+                                <label for="find_bank" class="form-label">Upload Your Image Here</label>
+                                <div class="form-find">
+                               
+                                  <input type="file" id="imgfile" hidden="hidden" />
+                                </div>
+                            </div>
+                    </fieldset>
+
+                    <h3>Set Image Processing Steps</h3>
+                    <fieldset>
+                        <h2>Set Image Processing Steps</h2>
+                        <p class="desc">Set up your Steps to predict the result</p>
+                      <label for="checkbox1" class="checkboxes">
+                        <input type="checkbox" id="checkbox1" name="checked" value="yes" class="checkboxes"/>
+                            Brain Extraction
+                        </label>
+                         <label for="checkbox1" class="checkboxes">
+                        <input type="checkbox" id="checkbox1" name="checked" value="yes" class="checkboxes"/>
+                           Motion Correction.
+                        </label>
+
+                         <label for="checkbox1" class="checkboxes">
+                        <input type="checkbox" id="checkbox1" name="checked" value="yes" class="checkboxes"/>
+                           Slice Time Correction.
+                        </label>
+                            <h4 class="clearBoth">Image Smoothing</h4>
+                         <label for="checkbox1" class="checkboxes">
+                        <input type="checkbox" id="checkbox1" name="checked" value="yes" class="checkboxes"/>
+                          Averging Filter.
+                        </label>
+                         <label for="checkbox1" class="checkboxes">
+                        <input type="checkbox" id="checkbox1" name="checked" value="yes" class="checkboxes"/>
+                          Gaussian Blurring
+                        </label>
+                          <label for="checkbox1" class="checkboxes">
+                        <input type="checkbox" id="checkbox1" name="checked" value="yes" class="checkboxes"/>
+                          Median Blurring
+                        </label>
+
+                         <h4 class="clearBoth">Image Thresholding</h4>
+                         <label for="checkbox1" class="checkboxes">
+                        <input type="checkbox" id="checkbox1" name="checked" value="yes" class="checkboxes"/>
+                          Adaptive Mean Thresholding.
+                        </label>
+                         <label for="checkbox1" class="checkboxes">
+                        <input type="checkbox" id="checkbox1" name="checked" value="yes" class="checkboxes"/>
+                          Adaptive Gaussian Thresholding 
+                        </label>
+                          <label for="checkbox1" class="checkboxes">
+                        <input type="checkbox" id="checkbox1" name="checked" value="yes" class="checkboxes"/>
+                          Ostu Binarization
+                        </label>
+                    </fieldset>
+
+                    <h3>Model selection</h3>
+                    <fieldset>
+                        <h2>Model selection</h2>
+                        <p class="desc">Select the model Predict the result</p>
+                        
+                        
+
+                           <div class="custom-select" style="width:200px;">
+                            <label for="model" id="carmodel">Choose a model:</label>
+                              <select>
+                                <option value="0">Select Model:</option>
+                                <option value="1">AlexNet</option>
+                                <option value="2">VGG16</option>
+                                <option value="3">VGG19</option>
+                                <option value="4">ResNet</option>
+                                
+                              </select>
+                          </div>
+                     
+                    </fieldset>
+                    
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="vendor/jquery-steps/jquery.steps.js"></script>
+    <script src="vendor/minimalist-picker/dobpicker.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/wnumb/wNumb.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/uploadFile.js"></script>
+</body>
+
+</html>
